@@ -1,0 +1,1205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    background: #050505;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #050505;
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 24px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    pointer-events: none;
+}
+
+
+.company-name {
+
+    width: 160px;
+
+    pointer-events: auto;
+}
+
+
+.company-name img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+
+    position: relative;
+
+    width: 300px;
+
+    pointer-events: auto;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0 20px 0 45px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.3);
+
+    border-radius: 30px;
+
+    background:
+        rgba(0,0,0,0.35);
+
+    color: white;
+
+    outline: none;
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.search-box input::placeholder {
+
+    color:
+        rgba(255,255,255,0.55);
+
+}
+
+
+.search-icon {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 10px;
+
+    font-size: 22px;
+
+    z-index: 2;
+}
+
+
+.search-results {
+
+    position: absolute;
+
+    top: 52px;
+
+    width: 100%;
+
+    background:
+        rgba(10,10,10,0.96);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    display: none;
+}
+
+
+.search-results button {
+
+    width: 100%;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.search-results button:hover {
+
+    background:
+        rgba(255,255,255,0.1);
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.menu-button {
+
+    width: 48px;
+    height: 48px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.35);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,0.35);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+}
+
+
+.menu-button span {
+
+    width: 20px;
+
+    height: 1px;
+
+    background: white;
+
+}
+
+
+/* =====================================================
+   SIDE MENU
+===================================================== */
+
+.side-menu {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 360px;
+
+    max-width: 90vw;
+
+    height: 100vh;
+
+    background:
+        rgba(8,8,8,0.97);
+
+    border-left:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    z-index: 2000;
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    transform:
+        translateX(100%);
+
+    transition:
+        transform 0.5s
+        cubic-bezier(.77,0,.18,1);
+}
+
+
+.side-menu.open {
+
+    transform:
+        translateX(0);
+}
+
+
+.menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.menu-header span {
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+}
+
+
+.close-menu {
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+
+.menu-category {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.category-button {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: 2px;
+}
+
+
+.category-button.active {
+
+    background: white;
+
+    color: black;
+}
+
+
+.menu-section {
+
+    margin-bottom: 30px;
+}
+
+
+.menu-section small {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.4;
+
+    margin-bottom: 10px;
+}
+
+
+.menu-section button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 9px 0;
+
+    background: none;
+
+    border: none;
+
+    color: rgba(255,255,255,0.75);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.menu-section button:hover {
+
+    color: white;
+
+    padding-left: 8px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.scene,
+.product-scene,
+.switch-scene,
+.final-scene {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   INTRO COMPANY
+===================================================== */
+
+#scene-company {
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.intro-frame {
+
+    position: relative;
+
+    width: 420px;
+
+    height: 420px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+
+.intro-company-logo {
+
+    width: 250px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.intro-caption {
+
+    margin-top: 35px;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.5;
+}
+
+
+.corner {
+
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+}
+
+
+.corner-tl {
+
+    top: 0;
+    left: 0;
+
+    border-top:
+        1px solid white;
+
+    border-left:
+        1px solid white;
+}
+
+
+.corner-tr {
+
+    top: 0;
+    right: 0;
+
+    border-top:
+        1px solid white;
+
+    border-right:
+        1px solid white;
+}
+
+
+.corner-bl {
+
+    bottom: 0;
+    left: 0;
+
+    border-bottom:
+        1px solid white;
+
+    border-left:
+        1px solid white;
+}
+
+
+.corner-br {
+
+    bottom: 0;
+    right: 0;
+
+    border-bottom:
+        1px solid white;
+
+    border-right:
+        1px solid white;
+}
+
+
+.intro-line {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 100px;
+
+    background:
+        rgba(255,255,255,0.3);
+
+    top: -100px;
+}
+
+
+/* =====================================================
+   NUTRICHOICE INTRO
+===================================================== */
+
+#scene-nutrichoice {
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff,
+            #ffffff 65%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.logo-frame {
+
+    position: relative;
+
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+
+.nutrichoice-logo {
+
+    width: 360px;
+
+    position: relative;
+
+    z-index: 4;
+}
+
+
+.logo-frame p {
+
+    margin-top: 35px;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.45;
+}
+
+
+.logo-ring {
+
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+}
+
+
+.ring-two {
+
+    width: 470px;
+    height: 470px;
+
+    border:
+        1px dashed
+        rgba(255,255,255,0.12);
+}
+
+
+/* =====================================================
+   NATURE'S NUTRITION
+===================================================== */
+
+#scene-nature {
+
+    background: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.nature-copy {
+
+    width: 80%;
+
+    max-width: 1100px;
+
+    text-align: center;
+}
+
+
+.nature-copy span {
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+
+    opacity: 0.45;
+}
+
+
+.nature-copy h1 {
+
+    font-size:
+        clamp(70px, 12vw, 180px);
+
+    line-height: 0.82;
+
+    margin: 30px 0;
+}
+
+
+.nature-copy p {
+
+    max-width: 480px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    opacity: 0.55;
+}
+
+
+.scroll-hint {
+
+    margin-top: 70px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.4;
+}
+
+
+.scroll-hint span {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   CATALOG INTRO
+===================================================== */
+
+.catalog-title {
+
+    height: 100vh;
+
+    background: #070707;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+.catalog-title span {
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+
+    opacity: 0.4;
+}
+
+
+.catalog-title h2 {
+
+    font-size:
+        clamp(65px, 10vw, 150px);
+
+    line-height: 0.82;
+
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   PRODUCT SCENES
+===================================================== */
+
+.product-scene {
+
+    height: 150vh;
+
+    min-height: 900px;
+
+    position: relative;
+}
+
+
+.product-scene > img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform:
+        scale(1.05);
+
+    transition:
+        transform 0.1s linear;
+}
+
+
+.product-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.15)
+        );
+}
+
+
+.product-info {
+
+    position: absolute;
+
+    left: 9%;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%)
+        translateX(-30px);
+
+    width: 560px;
+
+    max-width: 75%;
+
+    opacity: 0;
+}
+
+
+.product-info small {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.55;
+}
+
+
+.product-info h2 {
+
+    font-size:
+        clamp(65px, 9vw, 145px);
+
+    line-height: 0.8;
+
+    margin: 25px 0;
+}
+
+
+.product-info p {
+
+    max-width: 470px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    opacity: 0.78;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   FACTS
+===================================================== */
+
+.facts {
+
+    display: flex;
+
+    gap: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.25);
+}
+
+
+.facts div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.facts strong {
+
+    font-size: 22px;
+}
+
+
+.facts span {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    opacity: 0.45;
+}
+
+
+/* =====================================================
+   ORIGIN
+===================================================== */
+
+.origin {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.origin span {
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.45;
+}
+
+
+.origin strong {
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   OIL SWITCH
+===================================================== */
+
+.switch-scene {
+
+    height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #202020,
+            #050505 70%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.switch-scene span {
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.4;
+}
+
+
+.switch-scene h2 {
+
+    font-size:
+        clamp(70px, 11vw, 160px);
+
+    line-height: 0.8;
+
+    margin: 25px 0;
+}
+
+
+.switch-scene p {
+
+    opacity: 0.55;
+
+    font-size: 17px;
+}
+
+
+.switch-button {
+
+    margin-top: 40px;
+
+    padding: 15px 28px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.4);
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+    transition:
+        0.3s;
+}
+
+
+.switch-button:hover {
+
+    background: white;
+
+    color: black;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final-scene {
+
+    min-height: 100vh;
+
+    background: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.final-content span {
+
+    font-size: 9px;
+
+    letter-spacing: 6px;
+
+    opacity: 0.45;
+}
+
+
+.final-content h2 {
+
+    font-size:
+        clamp(75px, 12vw, 180px);
+
+    line-height: 0.8;
+
+    margin: 30px 0;
+}
+
+
+.final-content p {
+
+    opacity: 0.55;
+
+    font-size: 17px;
+}
+
+
+.final-line {
+
+    width: 100px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.4);
+
+    margin: 40px auto;
+}
+
+
+.final-content small {
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.35;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+
+        padding: 15px;
+
+    }
+
+
+    .company-name {
+
+        width: 100px;
+
+    }
+
+
+    .search-box {
+
+        display: none;
+
+    }
+
+
+    .intro-frame {
+
+        width: 300px;
+        height: 300px;
+
+    }
+
+
+    .intro-company-logo {
+
+        width: 190px;
+
+    }
+
+
+    .logo-frame {
+
+        width: 300px;
+        height: 300px;
+
+    }
+
+
+    .nutrichoice-logo {
+
+        width: 230px;
+
+    }
+
+
+    .logo-ring {
+
+        width: 260px;
+        height: 260px;
+
+    }
+
+
+    .ring-two {
+
+        width: 300px;
+        height: 300px;
+
+    }
+
+
+    .product-info {
+
+        left: 7%;
+
+        max-width: 86%;
+
+    }
+
+
+    .product-info h2 {
+
+        font-size: 75px;
+
+    }
+
+
+    .facts {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .side-menu {
+
+        width: 320px;
+
+    }
+
+}

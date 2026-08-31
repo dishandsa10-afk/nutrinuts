@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NutriChoice | Nature's Choice</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     FIXED TOP UI
+===================================================== -->
+
+<header class="top-bar">
+
+    <!-- COMPANY NAME / LOGO
+         Replace company-name.jpg later
+    -->
+
+    <div class="company-name">
+
+        <img
+            src="images/company-text.png"
+            alt="Company Name"
+        >
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search nuts, oils..."
+            autocomplete="off"
+        >
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- HAMBURGER -->
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     SIDE MENU
+===================================================== -->
+
+<aside
+    class="side-menu"
+    id="sideMenu"
+>
+
+    <div class="menu-header">
+
+        <span>EXPLORE</span>
+
+        <button
+            id="closeMenu"
+            class="close-menu"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="menu-category">
+
+        <button
+            class="category-button active"
+            data-category="nuts"
+        >
+            NUTS
+        </button>
+
+        <button
+            class="category-button"
+            data-category="oils"
+        >
+            OILS
+        </button>
+
+    </div>
+
+
+    <div class="menu-section">
+
+        <small>TREE NUTS</small>
+
+        <button data-jump="hazelnut">
+            Hazelnut
+        </button>
+
+        <button data-jump="chestnut">
+            Chestnut
+        </button>
+
+        <button data-jump="acorn">
+            Acorn
+        </button>
+
+        <button data-jump="macadamia">
+            Macadamia
+        </button>
+
+    </div>
+
+
+    <div class="menu-section">
+
+        <small>CULINARY TREE NUTS</small>
+
+        <button data-jump="walnut">
+            Walnut
+        </button>
+
+        <button data-jump="almond">
+            Almond
+        </button>
+
+        <button data-jump="pecan">
+            Pecan
+        </button>
+
+        <button data-jump="pistachio">
+            Pistachio
+        </button>
+
+        <button data-jump="cashew">
+            Cashew
+        </button>
+
+        <button data-jump="brazil">
+            Brazil Nut
+        </button>
+
+        <button data-jump="pine">
+            Pine Nut
+        </button>
+
+    </div>
+
+
+    <div class="menu-section oil-menu">
+
+        <small>OILS</small>
+
+        <button data-jump="soybean">
+            Soybean Oil
+        </button>
+
+        <button data-jump="canola">
+            Canola Oil
+        </button>
+
+        <button data-jump="corn">
+            Corn Oil
+        </button>
+
+        <button data-jump="sunflower">
+            Sunflower Seed Oil
+        </button>
+
+        <button data-jump="cottonseed">
+            Cottonseed Oil
+        </button>
+
+        <button data-jump="grapeseed">
+            Grapeseed Oil
+        </button>
+
+        <button data-jump="ricebran">
+            Rice Bran Oil
+        </button>
+
+        <button data-jump="peanut">
+            Peanut Oil
+        </button>
+
+        <button data-jump="sesame">
+            Sesame Seed Oil
+        </button>
+
+        <button data-jump="flaxseed">
+            Flaxseed Oil
+        </button>
+
+        <button data-jump="hemp">
+            Hemp Seed Oil
+        </button>
+
+        <button data-jump="chia">
+            Chia Seed Oil
+        </button>
+
+        <button data-jump="pumpkin">
+            Pumpkin Seed Oil
+        </button>
+
+        <button data-jump="blackcumin">
+            Black Cumin Seed Oil
+        </button>
+
+        <button data-jump="pomegranate">
+            Pomegranate Seed Oil
+        </button>
+
+        <button data-jump="camelina">
+            Camelina Oil
+        </button>
+
+        <button data-jump="raspberry">
+            Red Raspberry Seed Oil
+        </button>
+
+        <button data-jump="cranberry">
+            Cranberry Seed Oil
+        </button>
+
+        <button data-jump="watermelon">
+            Watermelon Seed Oil
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CINEMATIC EXPERIENCE
+===================================================== -->
+
+<main id="experience">
+
+
+    <!-- =================================================
+         SCENE 1 — COMPANY LOGO
+    ================================================== -->
+
+    <section
+        class="scene"
+        id="scene-company"
+        data-scene="company"
+    >
+
+        <div class="intro-frame">
+
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+
+            <div class="intro-line"></div>
+
+            <img
+                class="intro-company-logo"
+                src="images/logo.png"
+                alt="Company Logo"
+            >
+
+            <p class="intro-caption">
+                A JOURNEY THROUGH NATURE
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SCENE 2 — NUTRICHOICE LOGO
+    ================================================== -->
+
+    <section
+        class="scene"
+        id="scene-nutrichoice"
+    >
+
+        <div class="logo-frame">
+
+            <div class="logo-ring"></div>
+
+            <div class="logo-ring ring-two"></div>
+
+            <img
+                class="nutrichoice-logo"
+                src="images/text.png"
+                alt="NutriChoice"
+            >
+
+            <p>
+                CHOOSING NATURE · CHOOSING WELL
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SCENE 3 — NATURE'S NUTRITION
+    ================================================== -->
+
+    <section
+        class="scene"
+        id="scene-nature"
+    >
+
+        <div class="nature-copy">
+
+            <span>NUTRICHOICE</span>
+
+            <h1>
+                Nature's<br>
+                Nutrition
+            </h1>
+
+            <p>
+                Discover the ingredients,
+                stories and nourishment
+                behind every choice.
+            </p>
+
+            <div class="scroll-hint">
+                SCROLL TO EXPLORE
+                <span>↓</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         NUTS JOURNEY
+    ================================================== -->
+
+    <section
+        class="catalog"
+        id="nutsCatalog"
+    >
+
+        <div class="catalog-title">
+
+            <span>01 · NUTS</span>
+
+            <h2>
+                From tree<br>
+                to table.
+            </h2>
+
+        </div>
+
+
+
+        <!-- HAZELNUT -->
+
+        <article
+            class="product-scene"
+            data-product="hazelnut"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/hazelnut.jpg"
+                alt="Hazelnut"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>01 · TREE NUT</small>
+
+                <h2>Hazelnut</h2>
+
+                <p>
+                    A naturally rich nut with a
+                    delicate sweetness and a
+                    satisfying crunch.
+                </p>
+
+                <div class="facts">
+
+                    <div>
+                        <strong>176</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>4.2g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>17g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>4.7g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Europe & Western Asia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CHESTNUT -->
+
+        <article
+            class="product-scene"
+            data-product="chestnut"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/chestnut.jpg"
+                alt="Chestnut"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>02 · TREE NUT</small>
+
+                <h2>Chestnut</h2>
+
+                <p>
+                    Naturally lower in fat than
+                    many other nuts, with a
+                    distinctive earthy sweetness.
+                </p>
+
+                <div class="facts">
+
+                    <div>
+                        <strong>131</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>2g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>1.4g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>28g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Europe & Asia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACORN -->
+
+        <article
+            class="product-scene"
+            data-product="acorn"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/acorn.jpg"
+                alt="Acorn"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>03 · TREE SEED</small>
+
+                <h2>Acorn</h2>
+
+                <p>
+                    The seed of the oak tree,
+                    historically valued as a
+                    traditional food source.
+                </p>
+
+                <div class="facts">
+
+                    <div>
+                        <strong>144</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>2g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>9g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>15g</strong>
+                        <span>Carbs</span>
+                    </div>
+                    
+                    <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>North America, Europe & Asia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MACADAMIA -->
+
+        <article
+            class="product-scene"
+            data-product="macadamia"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/macadamia.jpg"
+                alt="Macadamia"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>04 · TREE NUT</small>
+
+                <h2>Macadamia</h2>
+
+                <p>
+                    Exceptionally creamy and rich,
+                    with a naturally buttery texture.
+                </p>
+                   
+                <div class="facts">
+                    
+                    <div>
+                        <strong>204</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>2.2g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>21.5g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>3.9g</strong>
+                        <span>Carbs</span>
+                    </div>
+                    
+                    <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>North America, Europe & Asia</strong>
+                </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Australia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WALNUT -->
+
+        <article
+            class="product-scene"
+            data-product="walnut"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/walnut.jpg"
+                alt="Walnut"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>05 · CULINARY TREE NUT</small>
+
+                <h2>Walnut</h2>
+
+                <p>
+                    Known for its rich flavour and
+                    naturally occurring healthy fats.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>185</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>4.3g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>18.5g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>3.9g</strong>
+                        <span>Carbs</span>
+                    </div>
+                    
+                    <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>North America, Europe & Asia</strong>
+                </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Central Asia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ALMOND -->
+
+        <article
+            class="product-scene"
+            data-product="almond"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/almonds.jpg"
+                alt="Almond"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>06 · CULINARY TREE NUT</small>
+
+                <h2>Almond</h2>
+
+                <p>
+                    A naturally nutritious nut
+                    containing protein, healthy
+                    fats and essential nutrients.
+                </p>
+
+                <div class="facts">
+
+                    <div>
+                        <strong>579</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>21g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>49g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>22g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Central & Southwest Asia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PECAN -->
+
+        <article
+            class="product-scene"
+            data-product="pecan"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/pecan.jpg"
+                alt="Pecan"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>07 · CULINARY TREE NUT</small>
+
+                <h2>Pecan</h2>
+
+                <p>
+                    A naturally rich nut with a
+                    buttery texture and deep flavour.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>196</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>2.6g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>20.4g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>3.9g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>North America</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PISTACHIO -->
+
+        <article
+            class="product-scene"
+            data-product="pistachio"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/pistachio.jpg"
+                alt="Pistachio"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>08 · CULINARY TREE NUT</small>
+
+                <h2>Pistachio</h2>
+
+                <p>
+                    A nutrient-dense nut with
+                    protein, fibre and healthy fats.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>159</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>6g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>13g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>8g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Central & Western Asia</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CASHEW -->
+
+        <article
+            class="product-scene"
+            data-product="cashew"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/cashew.jpg"
+                alt="Cashew"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>09 · CULINARY TREE NUT</small>
+
+                <h2>Cashew</h2>
+
+                <p>
+                    Smooth and creamy, with plant
+                    protein and important minerals.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>157</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>5.2g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>12.4g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>8.6g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Brazil</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BRAZIL NUT -->
+
+        <article
+            class="product-scene"
+            data-product="brazil"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/brazil-nut.jpg"
+                alt="Brazil Nut"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>10 · CULINARY TREE NUT</small>
+
+                <h2>Brazil Nut</h2>
+
+                <p>
+                    A rich source of selenium,
+                    healthy fats and plant protein.
+                </p>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Amazon Rainforest</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PINE NUT -->
+
+        <article
+            class="product-scene"
+            data-product="pine"
+            data-category="nuts"
+        >
+
+            <img
+                src="images/pine-nut.jpg"
+                alt="Pine Nut"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>11 · CULINARY TREE SEED</small>
+
+                <h2>Pine Nut</h2>
+
+                <p>
+                    Small, delicate seeds with a
+                    rich flavour used in many cuisines.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>191</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>3.9g</strong>
+                        <span>Protein</span>
+                    </div>
+
+                    <div>
+                        <strong>19.4g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>3.7g</strong>
+                        <span>Carbs</span>
+                    </div>
+
+                <div class="origin">
+                    <span>ORIGIN</span>
+                    <strong>Europe, Asia & North America</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OIL TRANSITION
+    ================================================== -->
+
+    <section
+        class="switch-scene"
+        id="oilSwitch"
+    >
+
+        <div>
+
+            <span>THE JOURNEY CONTINUES</span>
+
+            <h2>
+                From nuts<br>
+                to oils.
+            </h2>
+
+            <p>
+                Explore the world of
+                seed-derived oils.
+            </p>
+
+            <button
+                id="oilButton"
+                class="switch-button"
+            >
+                EXPLORE OILS →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OILS
+    ================================================== -->
+
+    <section
+        class="catalog oil-catalog"
+        id="oilCatalog"
+    >
+
+        <div class="catalog-title">
+
+            <span>02 · OILS</span>
+
+            <h2>
+                Extracted<br>
+                from nature.
+            </h2>
+
+        </div>
+
+
+
+        <!-- SOYBEAN -->
+
+        <article
+            class="product-scene"
+            data-product="soybean"
+            data-category="oils"
+        >
+
+            <img
+                src="images/soybean-oil.jpg"
+                alt="Soybean Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>01 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Soybean Oil</h2>
+
+                <p>
+                    A widely used vegetable oil
+                    valued for its versatility.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>884</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>22.8g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>57.7g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>15.6g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- CANOLA -->
+
+        <article
+            class="product-scene"
+            data-product="canola"
+            data-category="oils"
+        >
+
+            <img
+                src="images/canola-oil.jpg"
+                alt="Canola Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>02 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Canola Oil</h2>
+
+                <p>
+                    A versatile cooking oil
+                    commonly used for everyday meals.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>884</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>62g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>28g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>7g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CORN -->
+
+        <article
+            class="product-scene"
+            data-product="corn"
+            data-category="oils"
+        >
+
+            <img
+                src="images/corn-oil.jpg"
+                alt="Corn Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>03 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Corn Oil</h2>
+
+                <p>
+                    Extracted from corn germ and
+                    commonly used in cooking.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>900</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>27.5g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>54.6g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>12.9g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SUNFLOWER -->
+
+        <article
+            class="product-scene"
+            data-product="sunflower"
+            data-category="oils"
+        >
+
+            <img
+                src="images/sunflower-oil.jpg"
+                alt="Sunflower Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>04 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Sunflower Oil</h2>
+
+                <p>
+                    A popular seed oil with a
+                    light flavour and versatile use.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>884</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>80%</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>65%</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>10%</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- COTTONSEED -->
+
+        <article
+            class="product-scene"
+            data-product="cottonseed"
+            data-category="oils"
+        >
+
+            <img
+                src="images/cottonseed-oil.jpg"
+                alt="Cottonseed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>05 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Cottonseed Oil</h2>
+
+                <p>
+                    A versatile vegetable oil used
+                    in food and industrial applications.
+                </p>
+
+                <div>
+                        <strong>884</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>18g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>56g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>26g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- GRAPESEED -->
+
+        <article
+            class="product-scene"
+            data-product="grapeseed"
+            data-category="oils"
+        >
+
+            <img
+                src="images/grapeseed-oil.jpg"
+                alt="Grapeseed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>06 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Grapeseed Oil</h2>
+
+                <p>
+                    Pressed from grape seeds and
+                    valued for its mild flavour.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>832</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>20g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>65g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>11g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- RICE BRAN -->
+
+        <article
+            class="product-scene"
+            data-product="ricebran"
+            data-category="oils"
+        >
+
+            <img
+                src="images/rice-bran-oil.jpg"
+                alt="Rice Bran Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>07 · INDUSTRIAL & COOKING OIL</small>
+
+                <h2>Rice Bran Oil</h2>
+
+                <p>
+                    Derived from rice bran and
+                    widely used for cooking.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>884</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>39g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>37g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>25g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PEANUT -->
+
+        <article
+            class="product-scene"
+            data-product="peanut"
+            data-category="oils"
+        >
+
+            <img
+                src="images/peanut-oil.jpg"
+                alt="Peanut Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>08 · TRADITIONAL SEED OIL</small>
+
+                <h2>Peanut Oil</h2>
+
+                <p>
+                    A cooking oil made from
+                    pressed peanuts.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>813</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>50g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>32g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>17g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SESAME -->
+
+        <article
+            class="product-scene"
+            data-product="sesame"
+            data-category="oils"
+        >
+
+            <img
+                src="images/sesame-oil.jpg"
+                alt="Sesame Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>09 · TRADITIONAL SEED OIL</small>
+
+                <h2>Sesame Oil</h2>
+
+                <p>
+                    An aromatic oil deeply rooted
+                    in culinary traditions.
+                </p>
+
+                <div class="facts">
+                    
+                    <div>
+                        <strong>813</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>46g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>32g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>17g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- FLAX -->
+
+        <article
+            class="product-scene"
+            data-product="flaxseed"
+            data-category="oils"
+        >
+
+            <img
+                src="images/flaxseed-oil.jpg"
+                alt="Flaxseed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>10 · TRADITIONAL SEED OIL</small>
+
+                <h2>Flaxseed Oil</h2>
+
+                <p>
+                    A distinctive seed oil used
+                    in food and nutritional applications.
+                </p>
+
+                <div>
+                        <strong>884</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>18.4g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>72g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>9.4g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- HEMP -->
+
+        <article
+            class="product-scene"
+            data-product="hemp"
+            data-category="oils"
+        >
+
+            <img
+                src="images/hemp-oil.jpg"
+                alt="Hemp Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>11 · TRADITIONAL SEED OIL</small>
+
+                <h2>Hemp Seed Oil</h2>
+
+                <p>
+                    A plant-derived oil with a
+                    distinctive nutty character.
+                </p>
+
+                <div>
+                        <strong>900</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>9.5g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>80g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>9.5g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- CHIA -->
+
+        <article
+            class="product-scene"
+            data-product="chia"
+            data-category="oils"
+        >
+
+            <img
+                src="images/chia-oil.jpg"
+                alt="Chia Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>12 · TRADITIONAL SEED OIL</small>
+
+                <h2>Chia Seed Oil</h2>
+
+                <p>
+                    A specialty seed oil derived
+                    from chia seeds.
+                </p>
+
+                <div>
+                        <strong>830</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>7g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>83g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>9.5g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- PUMPKIN -->
+
+        <article
+            class="product-scene"
+            data-product="pumpkin"
+            data-category="oils"
+        >
+
+            <img
+                src="images/pumpkin-oil.jpg"
+                alt="Pumpkin Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>13 · TRADITIONAL SEED OIL</small>
+
+                <h2>Pumpkin Seed Oil</h2>
+
+                <p>
+                    A deeply coloured specialty oil
+                    with a distinctive flavour.
+                </p>
+
+                <div>
+                        <strong>828</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>32g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>60g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>18g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BLACK CUMIN -->
+
+        <article
+            class="product-scene"
+            data-product="blackcumin"
+            data-category="oils"
+        >
+
+            <img
+                src="images/black-cumin-oil.jpg"
+                alt="Black Cumin Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>14 · RARE SEED OIL</small>
+
+                <h2>Black Cumin Oil</h2>
+
+                <p>
+                    A specialty oil extracted from
+                    black cumin seeds.
+                </p>
+
+                <div>
+                        <strong>900</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>26g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>58g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>17g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- POMEGRANATE -->
+
+        <article
+            class="product-scene"
+            data-product="pomegranate"
+            data-category="oils"
+        >
+
+            <img
+                src="images/pomegranate-oil.jpg"
+                alt="Pomegranate Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>15 · RARE SEED OIL</small>
+
+                <h2>Pomegranate Oil</h2>
+
+                <p>
+                    A specialty oil obtained from
+                    pomegranate seeds.
+                </p>
+
+                <div>
+                        <strong>900</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>86g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>6g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CAMELINA -->
+
+        <article
+            class="product-scene"
+            data-product="camelina"
+            data-category="oils"
+        >
+
+            <img
+                src="images/camelina-oil.jpg"
+                alt="Camelina Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>16 · RARE SEED OIL</small>
+
+                <h2>Camelina Oil</h2>
+
+                <p>
+                    A specialty seed oil with a
+                    distinctive nutritional profile.
+                </p>
+
+                <div>
+                        <strong>828</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>35g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>51g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>9.2g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- RASPBERRY -->
+
+        <article
+            class="product-scene"
+            data-product="raspberry"
+            data-category="oils"
+        >
+
+            <img
+                src="images/raspberry-oil.jpg"
+                alt="Red Raspberry Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>17 · RARE SEED OIL</small>
+
+                <h2>Raspberry Seed Oil</h2>
+
+                <p>
+                    A specialty oil produced from
+                    raspberry seeds.
+                </p>
+
+                <div>
+                        <strong>819</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>100g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>17g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>93g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>5g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CRANBERRY -->
+
+        <article
+            class="product-scene"
+            data-product="cranberry"
+            data-category="oils"
+        >
+
+            <img
+                src="images/cranberry-oil.jpg"
+                alt="Cranberry Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>18 · RARE SEED OIL</small>
+
+                <h2>Cranberry Seed Oil</h2>
+
+                <p>
+                    A specialty oil derived from
+                    cranberry seeds.
+                </p>
+
+                <div>
+                        <strong>828</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>35g</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>51g</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>9.2g</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+            </div>
+
+        </article>
+
+
+
+        <!-- WATERMELON -->
+
+        <article
+            class="product-scene"
+            data-product="watermelon"
+            data-category="oils"
+        >
+
+            <img
+                src="images/watermelon-oil.jpg"
+                alt="Watermelon Seed Oil"
+            >
+
+            <div class="product-overlay"></div>
+
+            <div class="product-info">
+
+                <small>19 · RARE SEED OIL</small>
+
+                <h2>Watermelon Seed Oil</h2>
+
+                <p>
+                    A specialty oil made from
+                    watermelon seeds.
+                </p>
+
+                <div>
+                        <strong>900</strong>
+                        <span>Calories</span>
+                    </div>
+
+                    <div>
+                        <strong>92g</strong>
+                        <span>Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>73%</strong>
+                        <span>Monounsaturated Fat</span>
+                    </div>
+
+                    <div>
+                        <strong>18%</strong>
+                        <span>Polyunsaturated Fat</span>
+                    </div>
+
+                    <div>   
+                        <strong>22%</strong>
+                        <span>Saturated Fat</span>
+                    </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL
+    ================================================== -->
+
+    <section
+        class="final-scene"
+        id="finalScene"
+    >
+
+        <div class="final-content">
+
+            <span>NUTRICHOICE</span>
+
+            <h2>
+                Nature's<br>
+                Choice.
+            </h2>
+
+            <p>
+                From nature's ingredients
+                to your everyday choices.
+            </p>
+
+            <div class="final-line"></div>
+
+            <small>
+                CHOOSE NATURALLY · CHOOSE WISELY
+            </small>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
